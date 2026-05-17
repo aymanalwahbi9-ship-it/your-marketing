@@ -1,0 +1,839 @@
+/* تنسيقات عامة */
+body {
+  direction: rtl;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* لون Bondi الداكن */
+}
+.navbar-toggler-icon {
+  color: white !important;
+}
+/* قسم البطولة (الداكن) */
+/* هذا الكود يجعل أيقونة الموبايل بيضاء وواضحة جداً */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+.navbar-toggler:hover {
+  border-color: white;
+}
+.navbar {
+  background-color: #19283f;
+}
+/* لجعل إطار الزر نفسه متناسق مع التصميم */
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+.hero {
+  min-height: 100vh;
+  background-color: #19283f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* --- تنسيق الشعار النصي الضخم لـ Your Marketing --- */
+#text-brand {
+  /* جعل النص ضخماً جداً */
+  font-size: 32px; /* يمكنك زيادة هذا الرقم ليصبح أضخم */
+  /* جعل الخط عريضاً وقوياً جداً */
+  font-weight: 800 !important;
+  /* تغيير اللون الأزرق المميز لك من الشعار القديم */
+  color: #1e88e5 !important;
+  /* إضافة تأثير تباعد بين الحروف ليعطي فخامة (اختياري) */
+  letter-spacing: 1px;
+  /* للتأكد من أن النص يظهر بشكل جيد في شريط التنقل */
+  display: inline-block;
+  line-height: 1;
+}
+
+/* للتأكد من أن الشعار يظل واضحاً في الجوال */
+@media (max-width: 991px) {
+  #text-brand {
+    font-size: 24px;
+  }
+}
+
+.btn-main {
+  background-color: #ff5722;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 30px;
+  border: none;
+  font-weight: bold;
+}
+
+/* قسم الخدمات (الأبيض) */
+.services-section {
+  background-color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.section-icon {
+  color: #ff5722;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  color: #19283f;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 2px;
+  background-color: #33d1cc; /* الخط السماوي الصغير */
+}
+.service-box {
+  position: relative;
+  padding-top: 40px;
+  z-index: 1;
+}
+
+/* الرقم الكبير الشفاف خلف الأيقونة */
+.service-number {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8rem; /* حجم ضخم */
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.05); /* شفافية عالية جداً */
+  z-index: 0; /* ليكون خلف الأيقونة */
+}
+
+.service-icon i {
+  font-size: 5rem !important; /* تكبير الأيقونة بشكل إجباري */
+  color: #33d1cc !important;
+  display: inline-block;
+  margin-bottom: 25px !important;
+}
+
+.service-title {
+  font-size: 1.5rem !important; /* تكبير الخط الخاص بالعنوان أيضاً ليناسب الأيقونة */
+  color: #ffc107 !important;
+  font-weight: bold;
+}
+
+.service-box {
+  position: relative;
+}
+.service-number {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.05); /* هذه الشفافية التي طلبتها */
+  z-index: 1;
+  line-height: 1;
+}
+.service-icon {
+  font-size: 3rem;
+  color: #33d1cc;
+}
+
+/* تنسيقات عامة للقسم */
+.our-work {
+  background-color: #f8f9fa; /* لون خلفية فاتح جداً مثل القالب */
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* تمركز العنوان الرئيسي والأيقونة */
+.main-title h2 {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.main-title p {
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+/* تنسيق أزرار التصنيف (الكل، تصميم...) */
+.our-work ul li {
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: white; /* المربعات البيضاء للأزرار غير النشطة */
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.our-work ul li.active {
+  background-color: #ff3150 !important; /* اللون الأحمر للزر النشط */
+  color: white !important;
+  border-color: #ff3150;
+}
+
+/* تنسيق شبكة الأعمال (المربعات الستة) */
+.our-work .row {
+  margin-top: 50px;
+}
+
+.our-work .box {
+  background-color: white; /* المربع الأبيض */
+  border: 1px solid #eee; /* إطار خفيف جداً */
+  border-radius: 4px;
+  height: 200px; /* الارتفاع مثل القالب */
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* تأثير التظليل الخفيف عند تمرير الماوس */
+.our-work .box:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* الطبقة الخضراء/السماوية التي تظهر (Hover) */
+.our-work .caption {
+  background-color: rgba(51, 161, 158, 0.9); /* اللون الأخضر مثل القالب */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0; /* مخفية */
+  transition: 0.3s;
+}
+
+.our-work .box:hover .caption {
+  opacity: 1; /* تظهر عند Hover */
+}
+
+/* تنسيق الأزرار - إزالة كل شيء والبدء من الصفر */
+/* تنسيق الزر ليكون بيضاوي ونظيف مثل "ابدأ الآن" */
+
+/* هذا الكود يصمم الزر كـ Round Pill صافي */
+.pill-button {
+  background-color: transparent !important; /* خلفية شفافة تماماً لقتل المربعات */
+  border: none !important; /* حذف أي إطارات مستطيلة */
+  padding: 8px 25px !important; /* مساحة داخلية للزر */
+  border-radius: 50px !important; /* هذا هو سر الـ Round Pill */
+  color: #333 !important; /* لون النص */
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* الزر النشط (Active) - أحمر وبيضاوي */
+.pill-button.active {
+  background-color: #ff3150 !important; /* لون أحمر مثل "ابدأ الآن" */
+  color: white !important; /* نص أبيض */
+}
+
+/* عند تمرير الماوس (Hover) */
+.pill-button:hover {
+  background-color: #ff3150 !important; /* يتحول للأحمر */
+  color: white !important; /* النص أبيض */
+}
+.stuff {
+  background-color: #f8f9fa;
+}
+/* تنسيق العنوان والخط الصغير */
+.stuff .main-title h2 {
+  font-size: 40px;
+}
+
+.stuff .main-line {
+  width: 60px;
+  height: 2px;
+  background-color: #33d1cc; /* لون الزيرو المميز */
+  margin-top: 15px;
+}
+
+/* تنسيق النصوص المعربة */
+.stuff .text h3 {
+  color: #333;
+  letter-spacing: -1px;
+}
+
+.stuff .text p {
+  line-height: 1.8; /* لضمان انسيابية النص العربي */
+  color: #777 !important;
+}
+
+/* الزر الأحمر المميز */
+.stuff .main-btn {
+  background-color: #ff3150 !important;
+  color: #ffeb3b !important;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* موازنة الصورة بصرياً مع النص العربي */
+@media (min-width: 992px) {
+  .stuff .image {
+    margin-left: -60px; /* لسحب الصورة لليسار كما في الأصل */
+  }
+  .stuff .text {
+    padding-right: 20px; /* مسافة بسيطة للنص من جهة اليمين */
+  }
+}
+
+.team {
+  background-color: #f8f9fa;
+}
+
+.team .card-img-top {
+  height: 300px; /* ارتفاع مناسب لإظهار تفاصيل اللابتوب ولوحة الأكواد */
+  object-fit: cover;
+}
+
+.team-card {
+  transition: 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+/* --- قسم فريق Bondi المطور --- */
+.team {
+  background-color: #f8f9fa; /* خلفية رمادية فاتحة جداً لإبراز البطاقات البيضاء */
+}
+
+.team-card {
+  border: none;
+  border-radius: 20px; /* زوايا منحنية احترافية */
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* حركة مرنة عند التمرير */
+  border-bottom: 5px solid #19c8fa; /* خط فيروزي بالأسفل ليعطي هوية برمجية */
+}
+
+/* تأثير عند تمرير الماوس على البطاقة */
+.team-card:hover {
+  transform: translateY(-15px); /* رفع البطاقة للأعلى */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important; /* ظل قوي وجذاب */
+}
+
+/* تنسيق الصورة */
+.team .card-img-top {
+  height: 320px;
+  object-fit: cover; /* تجعل الصورة تملأ المكان بجمالية */
+  background: linear-gradient(to bottom, #f1f1f1, #ffffff);
+  transition: transform 0.5s;
+}
+
+.team-card:hover .card-img-top {
+  transform: scale(1.05); /* زووم بسيط جداً للصورة عند التمرير */
+}
+
+/* اسم المهندس */
+.team-name {
+  background-color: #19c8fa; /* لون بوندي الفيروزي */
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 15px !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* نص الخبرة (الاقتباس) */
+.team blockquote {
+  font-style: normal;
+  color: #070707;
+  line-height: 1.6;
+  border-left: none;
+  font-weight: bold;
+  position: relative;
+  padding: 25px !important;
+}
+
+/* إضافة علامة اقتباس جمالية بالـ CSS */
+.team blockquote::before {
+  content: "\201C"; /* رمز الاقتباس */
+  font-size: 50px;
+  color: #19c8fa;
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  opacity: 0.2;
+}
+/*
+.image-container {
+    height: 350px;
+}
+
+.team .card-img-top {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top; 
+    transition: 0.5s ease;
+}
+
+.name-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(25, 200, 250, 0.9)); 
+    color: white;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.team-card:hover .name-overlay {
+    padding-bottom: 25px;
+    background: rgba(25, 200, 250, 0.95);
+}
+
+.team-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+    */
+
+#team-logo {
+  background-color: #19283f;
+  width: 70px;
+  height: auto;
+}
+
+/* المدونه */
+
+/* --- تنسيق قسم المدونة (Your Marketing Blog) --- */
+
+.blog {
+  background-color: #f0f1f2 !important;
+
+  padding-bottom: 100px;
+  padding-top: 100px; /* نفس الخلفية الداكنة في الصورة */
+  font-family: "Cairo", sans-serif;
+}
+
+/* تنسيق الكارد (البوكس) */
+.blog .card {
+  transition: all 0.4s ease; /* سرعة الحركة */
+  border-bottom: 3px solid transparent; /* خط مخفي في البداية */
+}
+
+/* حركة عند مرور الماوس على البوكس */
+.blog .card:hover {
+  transform: translateY(-15px); /* يرتفع للأعلى قليلاً */
+  border-bottom: 3px solid #f33c3c; /* يظهر خط أحمر في الأسفل */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* تنسيق الصورة داخل البوكس */
+.blog .card-img {
+  height: 200px;
+  object-fit: cover; /* لضمان عدم تمدد الصورة */
+  filter: grayscale(20%); /* تأثير خفيف لجعلها كلاسيكية */
+  transition: 0.4s;
+}
+
+.blog .card:hover .card-img {
+  filter: grayscale(0%); /* تعود الألوان كاملة عند مرور الماوس */
+  scale: 1.05; /* زوم خفيف جداً */
+}
+
+/* تنسيق العناوين والنصوص */
+.blog .card-title {
+  color: #122131;
+  transition: 0.3s;
+}
+
+.blog .card:hover .card-title {
+  color: #f33c3c; /* يتغير لون العنوان للأحمر عند الماوس */
+}
+
+/* تنسيق الزر (البيضاوي) */
+.blog .btn-danger {
+  background-color: #f33c3c;
+  border: none;
+  font-weight: bold;
+  padding: 10px 25px;
+  transition: 0.3s;
+}
+
+.blog .btn-danger:hover {
+  background-color: #d32f2f;
+  box-shadow: 0 4px 15px rgba(243, 60, 60, 0.4);
+  transform: scale(1.05);
+}
+
+/* العنوان الرئيسي للقسم */
+.main-title h2 {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.blog .main-title h2 {
+  color: rgba(255, 193, 7, 1) !important;
+}
+.blog .main-title p {
+  color: #333 !important;
+}
+
+.main-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: #ffeb3b; /* خط أصفر تحت العنوان الرئيسي */
+}
+
+.blog .card-img {
+  height: 200px; /* نحدد طولاً ثابتاً لكل الصور */
+  object-fit: cover; /* هذا هو السر! يجعل الصورة تملاً المساحة بدون أن تتمطط أو تخترب أبعادها */
+  width: 100%; /* لتأخذ عرض البوكس كاملاً */
+}
+
+/* --- تنسيق قسم الشركاء/التقنيات --- */
+
+/* --- تنسيق قسم التقنيات الملونة (Your Marketing) --- */
+
+/* 1. إنشاء تقسيم لـ 8 أعمدة في الشاشات الكبيرة */
+@media (min-width: 992px) {
+  .col-lg-1-5 {
+    flex: 0 0 auto;
+    width: 12.5%; /* 100 / 8 = 12.5% */
+  }
+}
+
+/* 2. تنسيق البوكس العام والحركة */
+.tech-box {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tech-box:hover {
+  transform: translateY(-10px); /* يرتفع قليلاً عند الماوس */
+}
+
+/* 3. تحديد الألوان الأصلية لكل أيقونة */
+.html5-color {
+  color: #e34f26;
+} /* برتقالي HTML */
+.css3-color {
+  color: #1572b6;
+} /* أزرق CSS */
+.js-color {
+  color: #f7df1e;
+} /* أصفر JS */
+.bootstrap-color {
+  color: #7952b3;
+} /* بنفسجي Bootstrap */
+.php-color {
+  color: #777bb4;
+} /* أزرق رمادي PHP */
+.mysql-color {
+  color: #4479a1;
+} /* أزرق MySQL */
+.laravel-color {
+  color: #ff2d20;
+} /* أحمر Laravel */
+.api-color {
+  color: #00bfa5;
+} /* تيل (Teal) للـ APIs */
+
+/* 4. إضافة تأثير توهج خفيف عند مرور الماوس (اختياري ولكنه فخم) */
+.tech-box:hover i {
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+/* --- تنسيق قسم ابدأ مشروعك (Start Project) --- */
+.start-project {
+  /* هذا هو اللون الكحلي الغامق جداً الموجود في صورة الزيرو */
+  background-color: #19283f;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.start-project h2 {
+  font-size: 2.5rem;
+  letter-spacing: -1px;
+}
+
+.start-project p {
+  font-size: 1.1rem;
+}
+
+/* تنسيق الزر ليكون مطابقاً للصورة */
+.start-project .btn-danger {
+  background-color: #ff3150; /* درجة الأحمر الفاتح في تصميم Bondi */
+  border: none;
+  transition: 0.3s;
+}
+
+.start-project .btn-danger:hover {
+  background-color: #d62842;
+  box-shadow: 0 4px 20px rgba(255, 49, 80, 0.3);
+  transform: scale(1.05);
+}
+
+/* --- تنسيق قسم المدونة (Blog Section) --- */
+.blog .main-title i {
+  color: #19c8fa; /* اللون الأزرق حق Bondi */
+}
+
+/* تنسيق الكارد ليكون بدون حواف حادة */
+.blog .card {
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.blog .card:hover {
+  transform: translateY(-5px); /* حركة خفيفة عند الماوس */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* السر هنا: جعل الصور متساوية الحجم مهما كانت أبعادها الأصلية */
+.blog .card-img {
+  height: 250px; /* طول ثابت موحد لكل الصور */
+  object-fit: cover; /* قص ذكي للصورة لتملأ المساحة بدون تمطيط */
+  width: 100%;
+}
+
+.blog .card-title {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* تنسيق الأزرار الحمراء داخل الكارد */
+.blog .card .btn-danger {
+  background-color: #ff3150;
+  border: none;
+  font-size: 0.8rem;
+}
+
+/* تنسيق زر "عرض المزيد" الأزرق الكبير */
+.blog .btn-primary {
+  background-color: #19c8fa;
+  border: none;
+  letter-spacing: 1px;
+}
+
+.blog .btn-primary:hover {
+  background-color: #15a5d1;
+}
+
+/* --- قسم الاشتراك (Subscribe) --- */
+.subscribe {
+  background-color: #ffc107;
+}
+.subscribe input[type="email"]::placeholder {
+  color: #555;
+}
+.subscribe input[type="email"]:focus {
+  box-shadow: none;
+  outline: none;
+  border-bottom-color: black !important;
+}
+.subscribe .btn-dark {
+  background-color: #19283f;
+  color: #ffc107;
+  border: none;
+}
+
+/* --- قسم الفوتر (Footer) --- */
+.footer {
+  background-color: #19283f; /* نفس لون الزيرو الداكن */
+  color: #abb1be !important;
+}
+
+.footer h5 {
+  color: white !important;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer ul li {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.footer ul li:hover {
+  color: #19c8fa; /* تلون باللبني عند الماوس */
+  padding-right: 5px; /* حركة بسيطة للداخل */
+}
+
+/* تنسيق أيقونات السوشيال ميديا */
+.footer i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #1f2d44;
+}
+
+.footer .facebook:hover {
+  color: #1877f2;
+}
+.footer .twitter:hover {
+  color: #1da1f2;
+}
+.footer .linkedin:hover {
+  color: #0077b5;
+}
+.footer .youtube:hover {
+  color: #ff0000;
+}
+
+/* --- ألوان أيقونات السوشيال ميديا (ملونة دائماً) --- */
+
+/* 1. تنسيق عام لجميع الأيقونات في الفوتر */
+.footer ul i {
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2. الألوان الرسمية لكل أيقونة (بدون hover) */
+.footer .facebook {
+  color: #1877f2 !important; /* أزرق فيسبوك */
+}
+
+.footer .twitter {
+  color: #1da1f2 !important; /* أزرق تويتر */
+}
+
+.footer .linkedin {
+  color: #0077b5 !important; /* أزرق لينكد إن */
+}
+
+.footer .youtube {
+  color: #ff0000 !important; /* أحمر يوتيوب */
+}
+
+.footer .whatsapp {
+  color: #25d366 !important; /* أخضر واتساب */
+}
+
+/* 3. حركة بسيطة عند مرور الماوس (اختياري لزيادة التفاعل) */
+.footer ul i:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2); /* تفتيح اللون قليلاً عند الوقوف عليه */
+}
+
+/* --- ألوان أيقونات المبرمجين والمصممين الجديدة --- */
+
+/* 1. جيت هاب (GitHub) - أسود فخم */
+/* تنسيق لون الجيت هاب البنفسجي الثابت (Your Marketing) */
+.footer .github {
+  color: #6e5494 !important; /* هذا هو اللون البنفسجي الدقيق للجيت هاب */
+  background-color: transparent; /* إزالة الخلفية البيضاء إذا كانت موجودة */
+  transition: 0.3s;
+}
+
+/* تأثير بسيط عند مرور الماوس (اختياري) */
+.footer .github:hover {
+  color: #a188c6 !important; /* درجة أفتح قليلاً عند الوقوف عليه */
+  transform: scale(1.1);
+}
+/* 2. تليجرام (Telegram) - أزرق سماوي */
+.footer .telegram {
+  color: #26a5e4 !important;
+}
+
+/* 3. ستاك أوفر فلو (Stack Overflow) - برتقالي رسمي */
+.footer .stack-overflow {
+  color: #f48024 !important;
+}
+
+/* 4. بيهانس (Behance) - أزرق ملكي */
+.footer .behance {
+  color: #1769ff !important;
+}
+
+/* إضافة خلفية خفيفة جداً لبروز الأيقونات على الخلفية الداكنة */
+.footer ul li i {
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+}
+
+.footer ul li i:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+/* جعل الحاوية مرجعاً للتموضع النسبي */
+.laptop-wrapper {
+  position: relative;
+  display: inline-block;
+}
+/* توحيد أبعاد صندوق العمل */
+.work-box {
+  height: 220px; /* يمكنك زيادة أو إنقاص هذا الارتفاع حسب رغبتك */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  overflow: hidden; /* لإخفاء أي جزء زائد من الصورة */
+}
+
+/* توحيد مقاسات الصور داخل الصناديق وتجنب تمطيطها */
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* هذا السطر الأهم: يقوم بقص الصورة لتملأ الفراغ بالكامل دون أن تختل أبعادها */
+  object-position: center; /* لجعل وسط الصورة هو الظاهر دائماً */
+}
+
+/* تنسيق النص وتوسيطه بدقة داخل الشاشة السوداء */
+.screen-brand {
+  position: absolute;
+  top: 46%; /* جرب تغييرها بين 44% إلى 48% حتى يتوسط الشاشة تماماً */
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* تنسيق المظهر وضمان استجابة الخط */
+  color: #ffffff;
+  font-family: "Poppins", sans-serif; /* أو أي خط تفضله بمشروعك */
+  font-weight: bold;
+  font-size: calc(12px + 1vw); /* مقاس ديناميكي يصغر ويكبر مع حجم الشاشات */
+  letter-spacing: 1px;
+  white-space: nowrap; /* لمنع انقسام النص إلى سطرين */
+  pointer-events: none; /* لمنع التداخل مع مؤشر الماوس */
+  opacity: 0.9; /* تعطي طابعاً واقعياً لإضاءة الشاشة */
+}
+#text-brand {
+  font-family:
+    "Poppins", sans-serif !important; /* تأكد من استدعاء الخط في الهيد */
+  font-size: 20px !important; /* حجم احترافي غير مزعج */
+  font-weight: 700 !important; /* أقصى سمك للخط ليعطي هيبة */
+  color: #1e88e5 !important; /* اللون الأزرق التقني */
+  /* حروف كبيرة للفخامة */
+  letter-spacing: 1.5px; /* تباعد بسيط بين الأحرف */
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* لضمان عدم إزاحة الروابط وتوسيط العناصر عمودياً */
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
